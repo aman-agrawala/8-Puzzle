@@ -51,9 +51,10 @@ public class Board {
                         r -= 1;
                     }
 
-                    manhattan += (Math.abs(r-i)+Math.ads(c-j));
+                    manhattan += (Math.abs(r-i)+Math.abs(c-j));
                 } 
             }
         }
+        return manhattan;
     }
 }
