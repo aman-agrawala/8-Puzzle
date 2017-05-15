@@ -51,10 +51,45 @@ public class Board {
                         r -= 1;
                     }
 
-                    manhattan += (Math.abs(r-i)+Math.abs(c-j));
+                    manhattan += (Math.abs(r-i))+(Math.abs(c-j));
                 } 
             }
         }
         return manhattan;
+    }
+    
+    public boolean isGoal()
+    {
+        if(hamming() == 0)
+        {
+            return true;
+        }
+        return false;
+    }
+    
+    public Board twin()
+    {
+        int temp = 0;
+        Board twin = new Board(board);
+        if(board[0][0] != 0 && board[0][1] != 0)
+        {
+           // twin.board = board;
+            temp = twin.board[0][0];
+            twin.board[0][0] = twin.board[0][1];
+            twin.board[0][1] = temp;
+        }
+        else
+        {
+           // twin.board = board;
+            temp = twin.board[1][0];
+            twin.board[1][0] = twin.board[1][1];
+            twin.board[1][1] = temp;
+        }
+        return twin;
+    }
+    
+    public boolean equals(Object y)
+    {
+        
     }
 }
