@@ -90,6 +90,12 @@ public class Board {
     
     public boolean equals(Object y)
     {
+        Board yBoard = (Board) y;
+        return java.util.Arrays.deepEquals(board,yBoard.board);
+    }
+    
+    public Iterable<Board> neighbors()
+    {
         
     }
 }
