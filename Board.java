@@ -79,7 +79,7 @@ public class Board {
     
     public boolean isGoal()
     {
-        if(hamming() == 0)
+        if(manhattan() == 0)
         {
             return true;
         }
